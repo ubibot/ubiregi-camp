@@ -22,5 +22,8 @@
       - if @project_people.member?(person.id)
         = render partial: "people/in_project", locals: { person: person, have_access: true }
     - for person in @people
-      - unless @project_people.member?(person.id)
+      - if !@project_people.member?(person.id) && manageable_person?(person)
+        = render partial: "people/in_project", locals: { person: person, have_access: false }
+    - for person in @people
+      - if !@project_people.member?(person.id) && !manageable_person?(person)
         = render partial: "people/in_project", locals: { person: person, have_access: false }

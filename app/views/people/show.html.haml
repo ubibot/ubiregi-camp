@@ -18,7 +18,9 @@
     %tr
       %th 管理者
       %td= @person.attributes["admin"]
-
+    %tr
+      %th 管理下
+      %td= manageable_person?(@person)
 
   %h2 プロジェクト
   %table.projects.table

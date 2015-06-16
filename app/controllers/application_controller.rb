@@ -18,4 +18,23 @@ class ApplicationController < ActionController::Base
     return if authenticated?
     redirect_to login_url(path: request.path)
   end
+
+  def manageable_person?(person)
+    return true unless BASECAMP_GROUP_ID
+
+    unless @managing_people
+      members = client.groups(BASECAMP_GROUP_ID).memberships
+      @managing_people = Set.new(members.map(&:id))
+    end
+
+    id = case person
+         when Logan::Person
+           person.id
+         else
+           person
+         end
+    @managing_people.member?(id)
+  end
+
+  helper_method :manageable_person?
 end

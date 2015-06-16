@@ -1,7 +1,7 @@
 GIT
   remote: git://github.com/soutaro/logan.git
-  revision: a23322111d1b372ffca8d47e7a359528ecf163df
-  branch: person_projects
+  revision: db0dad8be3f4d390fe4fa3ab13ac63c4d1694e11
+  branch: camp
   specs:
     logan (0.2.1)
       httparty (= 0.11.0)
