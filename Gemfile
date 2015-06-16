@@ -33,6 +33,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'logan', github: "soutaro/logan", branch: "person_projects"
 gem 'haml-rails'
 gem 'strong_json'
+gem 'omniauth'
+gem 'omniauth-google-oauth2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

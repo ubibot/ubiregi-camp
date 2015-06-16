@@ -1,0 +1,8 @@
+%html
+  %head
+    %title Ubiregi Camp
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body.welcome
+    %div
+      = link_to "ログイン", login_url, class: "btn btn-lg btn-success"
