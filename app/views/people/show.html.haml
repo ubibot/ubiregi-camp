@@ -1,0 +1,30 @@
+.container-fluid
+  .page-header
+    %h1
+      = image_tag @person.avatar_url
+      = @person.name
+      %small= @person.email_address
+
+  %table.table
+    %tr
+      %th 作成日時
+      %td= l Time.parse(@person.attributes["created_at"]), format: :long
+    %tr
+      %th 更新日時
+      %td= l Time.parse(@person.attributes["updated_at"]), format: :long
+    %tr
+      %th プロジェクト作成できる
+      %td= @person.attributes["can_create_projects"]
+    %tr
+      %th 管理者
+      %td= @person.attributes["admin"]
+
+
+  %h2 プロジェクト
+  %table.projects.table
+    - for project in @projects
+      - if @person_projects.member?(project.id)
+        = render partial: "projects/of_person", locals: { project: project, have_access: true }
+    - for project in @projects
+      - unless @person_projects.member?(project.id)
+        = render partial: "projects/of_person", locals: { project: project, have_access: false }

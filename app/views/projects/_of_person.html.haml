@@ -1,0 +1,6 @@
+%tr.project
+  %th.name= link_to project.name, project_url(project.id)
+  %td.access
+    = label_tag do
+      = check_box_tag "access", "1", have_access, "data-person-id": @person.id, "data-project-id": project.id
+      アクセス権

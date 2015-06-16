@@ -1,0 +1,26 @@
+.container-fluid
+  .page-header
+    %h1
+      = @project.name
+      %small= @project.description
+
+  %table.table
+    %tr
+      %th 作成日時
+      %td= l Time.parse(@project.attributes["created_at"]), format: :long
+    %tr
+      %th 更新日時
+      %td= l Time.parse(@project.attributes["updated_at"]), format: :long
+    %tr
+      %th Basecamp
+      %td= link_to @project.app_url, @project.app_url, target: "_blank"
+
+  %h2 人々
+
+  %table.people.table
+    - for person in @people
+      - if @project_people.member?(person.id)
+        = render partial: "people/in_project", locals: { person: person, have_access: true }
+    - for person in @people
+      - unless @project_people.member?(person.id)
+        = render partial: "people/in_project", locals: { person: person, have_access: false }

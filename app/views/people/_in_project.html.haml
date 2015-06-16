@@ -1,0 +1,9 @@
+%tr.person
+  %th.name
+    = image_tag person.avatar_url
+    = link_to person.name, person_url(person.id)
+  %td.email= person.email_address
+  %td.access
+    = label_tag do
+      = check_box_tag "access", "1", have_access, "data-person-id": person.id, "data-project-id": @project.id
+      アクセス権

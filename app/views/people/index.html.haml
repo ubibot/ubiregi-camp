@@ -1,0 +1,10 @@
+.container-fluid
+  %h1 人々
+
+  %table.people.table
+    - for person in @people
+      %tr.person
+        %th.name
+          = image_tag person.avatar_url
+          = link_to person.name, person_url(person.id)
+        %td.email= person.email_address
