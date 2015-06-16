@@ -122,6 +122,8 @@ GEM
       oauth2 (~> 1.0)
       omniauth (~> 1.2)
     pg (0.18.2)
+    puma (2.11.3)
+      rack (>= 1.1, < 2.0)
     rack (1.6.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -205,6 +207,7 @@ DEPENDENCIES
   omniauth
   omniauth-google-oauth2
   pg
+  puma
   rails (= 4.2.1)
   rails-assets-bootstrap!
   sass-rails (~> 5.0)
