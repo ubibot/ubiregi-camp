@@ -9,4 +9,6 @@ Rails.application.routes.draw do
   end
 
   root "welcome#index"
+  get '/login' => 'welcome#login'
+  get '/logout' => 'welcome#logout'
 end

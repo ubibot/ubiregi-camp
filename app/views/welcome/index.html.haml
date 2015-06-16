@@ -1,0 +1,33 @@
+.container-fluid
+  .row
+    .col-md-6
+      %h2 プロジェクト
+
+      %p{ style: "text-align: right" }
+        = link_to "全プロジェクト", projects_url
+
+      %table.table
+        %tr
+          %th プロジェクト名
+          %th 作成日時
+        - for project in @projects
+          %tr
+            %td= link_to project.name, project_url(project.id)
+            %td= l Time.parse(project.created_at), format: :short
+
+    .col-md-6
+      %h2 人々
+
+      %p{ style: "text-align: right" }
+        = link_to "全ての人々", people_url
+
+      %table.table.people
+        %tr
+          %th 名前
+          %th 登録日時
+        - for person in @people
+          %tr.person
+            %td
+              = image_tag person.avatar_url
+              = link_to person.name, person_url(person.id)
+            %td= l Time.parse(person.created_at), format: :short
