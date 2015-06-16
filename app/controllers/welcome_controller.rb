@@ -20,6 +20,12 @@ class WelcomeController < ApplicationController
   end
 
   def oauth2callback
+    email = request.env['omniauth.auth']["info"]["email"]
+    unless email.end_with?("@#{OMNIAUTH_VALID_DOMAIN}")
+      redirect_to root_url
+      return
+    end
+
     session[:authenticated] = true
     redirect_to request.env['omniauth.params']["path"] || root_url
   end
