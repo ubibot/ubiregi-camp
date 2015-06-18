@@ -1,5 +1,6 @@
-%tr.project
+%tr.project{ data: {"project-recently-updated": project.attributes["updated_at"].try {|date| date > 1.months.ago }.to_s } }
   %th.name= link_to project.name, project_url(project.id)
+  %td.updated_at= l Time.parse(project.attributes["updated_at"]), format: :long
   %td.access
     = label_tag nil, nil, "data-disabled": !manageable_person?(@person) do
       = check_box_tag "access", "1", have_access, "data-person-id": @person.id, "data-project-id": project.id, disabled: !manageable_person?(@person)

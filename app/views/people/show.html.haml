@@ -24,6 +24,10 @@
 
   %h2 プロジェクト
   %table.projects.table
+    %tr
+      %th プロジェクト名
+      %th 更新日時
+      %th
     - for project in @projects
       - if @person_projects.member?(project.id)
         = render partial: "projects/of_person", locals: { project: project, have_access: true }
