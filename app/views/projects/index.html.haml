@@ -8,7 +8,7 @@
       %th 更新日時
       %th Basecamp
     - for project in @projects
-      %tr.project
+      %tr.project{ data: {"project-recently-updated": project.attributes["updated_at"].try {|date| date > 1.months.ago }.to_s } }
         %th.name= link_to project.name, project_url(project.id)
         %td.created_at= l Time.parse(project.attributes["created_at"]), format: :long
         %td.updated_at= l Time.parse(project.attributes["updated_at"]), format: :long

@@ -1,4 +1,4 @@
-%tr.project
+%tr.project{ data: {"project-recently-updated": project.attributes["updated_at"].try {|date| date > 1.months.ago }.to_s } }
   %th.name= link_to project.name, project_url(project.id)
   %td.updated_at= l Time.parse(project.attributes["updated_at"]), format: :long
   %td.access
