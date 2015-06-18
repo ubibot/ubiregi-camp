@@ -21,3 +21,7 @@ Define the following environment variables for authentication configuration:
 Define the following environment variable to use SSL.
 
 * FORCE_SSL - `true` to enable `force_ssl` in production
+
+## Deploy to Heroku
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
