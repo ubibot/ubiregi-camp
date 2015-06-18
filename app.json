@@ -1,0 +1,55 @@
+{
+  "name": "Camp",
+  "description": "Basecamp console for loosely managed projects and people.",
+  "keywords": [
+    "productivity",
+    "project management",
+    "basecamp"
+  ],
+  "env": {
+    "BASECAMP_ID": {
+      "description": "Basecamp account ID."
+    },
+    "BASECAMP_USERNAME": {
+      "description": "Basecamp username."
+    },
+    "BASECAMP_PASSWORD": {
+      "description": "Basecamp password."
+    },
+    "BASECAMP_USERAGENT": {
+      "description": "Useragent sent to Basecamp.",
+      "required": false
+    },
+    "BASECAMP_GROUP_ID": {
+      "description": "Basecamp group id; the basecamp account can be managed through this app if the account belongs to the group.",
+      "required": false
+    },
+    "OMNIAUTH_GOOGLE_CLIENT_ID": {
+      "description": "Google app client id to be used for authentication."
+    },
+    "OMNIAUTH_GOOGLE_CLIENT_SECRET": {
+      "description": "Google app client secret to be used for authentication."
+    },
+    "OMNIAUTH_VALID_DOMAIN": {
+      "description": "Domain name to accept login.",
+      "value": "ubiregi.com"
+    },
+    "FORCE_SSL": {
+      "description": "Specify true if you want to set force_ssl = true.",
+      "value": "true",
+      "required": false
+    },
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    },
+    "WEB_CONCURRENCY": {
+      "description": "The number of processes to run.",
+      "value": "2"
+    },
+    "MAX_THREADS": {
+      "description": "The number of threads to run.",
+      "value": "5"
+    }
+  }
+}
