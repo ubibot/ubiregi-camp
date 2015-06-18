@@ -5,9 +5,11 @@
     %tr
       %th プロジェクト名
       %th 作成日時
+      %th 更新日時
       %th Basecamp
     - for project in @projects
       %tr.project
         %th.name= link_to project.name, project_url(project.id)
         %td.created_at= l Time.parse(project.attributes["created_at"]), format: :long
-        %td.url= link_to project.app_url, project.app_url, target: "_blank"
+        %td.updated_at= l Time.parse(project.attributes["updated_at"]), format: :long
+        %td.url= link_to "Show", project.app_url, target: "_blank"
