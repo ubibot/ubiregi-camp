@@ -30,4 +30,7 @@
             %td
               = image_tag person.avatar_url
               = link_to person.name, person_url(person.id)
+              - if manageable_person?(person)
+                %span.label.label-success.manageable
+                  %span.glyphicon.glyphicon-ok
             %td= l Time.parse(person.created_at), format: :short

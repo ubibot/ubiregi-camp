@@ -20,3 +20,12 @@ body { padding-top: 70px; }
 label[data-disabled=true] {
     color: grey;
 }
+
+.manageable {
+  display: inline-block;
+  background-color: $brand-success;
+  border-radius: 20px;
+  padding: 5px 6px 7px;
+  text-align: center;
+  vertical-align: middle;
+}
