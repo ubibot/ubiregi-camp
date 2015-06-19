@@ -1,7 +1,6 @@
 body.welcome{
   padding-top: 0;
-  background: image-url(shika) no-repeat center;
-  background-size: cover;;
+  background: image-url(shika) no-repeat center center /cover fixed;
 
   div {
     position: fixed;
