@@ -3,6 +3,9 @@
     %h1
       = image_tag @person.avatar_url
       = @person.name
+      - if manageable_person?(@person)
+        %span.label.label-success.manageable
+          %span.glyphicon.glyphicon-ok
       %small= @person.email_address
 
   %table.table

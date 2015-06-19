@@ -7,5 +7,14 @@ table.people {
     td {
       vertical-align: middle;
     }
+    th.name a {
+      margin-left: 10px;
+    }
+  }
+}
+
+h1 {
+  .manageable {
+    font-size: 22px;
   }
 }
