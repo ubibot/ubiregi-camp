@@ -49,8 +49,6 @@ group :development, :test do
   gem 'spring'
 end
 
-source 'https://rails-assets.org' do
-  gem 'rails-assets-bootstrap'
-end
+gem "bootstrap-sass", '3.3.3'
 
 
