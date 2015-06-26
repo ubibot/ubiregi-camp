@@ -12,4 +12,4 @@
         %th.name= link_to project.name, project_url(project.id)
         %td.created_at= l Time.parse(project.attributes["created_at"]), format: :long
         %td.updated_at= l Time.parse(project.attributes["updated_at"]), format: :long
-        %td.url= link_to "Show", project.app_url, target: "_blank"
+        %td.url= link_to project.id, project.app_url, target: "_blank"
