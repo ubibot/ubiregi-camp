@@ -30,6 +30,10 @@ $ ->
 
 $(document).on "page:fetch", ->
   $("body").css("opacity", 0.8)
+  $("#logo").hide()
+  $("#ajax-loader").show()
 
 $(document).on "page:load", ->
   $("body").css("opacity", 1.0)
+  $("#ajax-loader").hide()
+  $("#logo").show()

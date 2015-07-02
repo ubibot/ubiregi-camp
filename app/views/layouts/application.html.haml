@@ -8,7 +8,8 @@
     %nav.navbar.navbar-default.navbar-fixed-top
       .container-fluid
         .navbar-header
-          = link_to "Camp", root_url, class: "navbar-brand"
+          = link_to "Camp", root_url, class: "navbar-brand", id: "logo"
+          = link_to image_tag("ajax-loader-small.gif"), root_url, class: "navbar-brand", id: "ajax-loader", style: "display: none;"
         .collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li= link_to "プロジェクト", projects_url
