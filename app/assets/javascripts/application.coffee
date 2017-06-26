@@ -28,12 +28,12 @@ toggleGrant = (event) ->
 $ ->
   $(document).on "click", "input[name=access][type=checkbox]", toggleGrant
 
-$(document).on "page:fetch", ->
+$(document).on "turbolinks:request-start", ->
   $("body").css("opacity", 0.8)
   $("#logo").hide()
   $("#ajax-loader").show()
 
-$(document).on "page:load", ->
+$(document).on "turbolinks:load", ->
   $("body").css("opacity", 1.0)
   $("#ajax-loader").hide()
   $("#logo").show()
