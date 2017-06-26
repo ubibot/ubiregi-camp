@@ -4,5 +4,6 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = csrf_meta_tags
   %body.welcome
-    %div
+    .welcome-panel
+      .welcome-panel__title Ubiregi Camp
       = link_to "ログイン", login_url, class: "btn btn-lg btn-success"
