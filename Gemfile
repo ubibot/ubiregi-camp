@@ -31,7 +31,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'logan', github: "soutaro/logan", branch: "camp"
+gem 'logan', git: "https://github.com/soutaro/logan", branch: "camp"
 gem 'haml-rails'
 gem 'strong_json'
 gem 'omniauth'

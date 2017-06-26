@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/soutaro/logan.git
+  remote: https://github.com/soutaro/logan
   revision: db0dad8be3f4d390fe4fa3ab13ac63c4d1694e11
   branch: camp
   specs:
