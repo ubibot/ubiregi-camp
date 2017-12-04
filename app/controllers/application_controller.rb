@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   private
 
   def client
-    Logan::Client.new(BASECAMP_ID, { username: BASECAMP_USERNAME, password: BASECAMP_PASSWORD }, BASECAMP_USERAGENT)
+    Logan::Client.new(BASECAMP_ID, { access_token: BASECAMP_TOKEN }, BASECAMP_USERAGENT)
   end
 
   def authenticated?
